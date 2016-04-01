@@ -36,8 +36,8 @@ public class NewsCustomAdapter extends ArrayAdapter<News> {
         TextView date = (TextView) convertView.findViewById(R.id.news_date);
         date.setText(news.getDate());
 
-        //TextView category = (TextView) convertView.findViewById(R.id.news_category);
-        //category.setText(news.getCategory());
+        TextView category = (TextView) convertView.findViewById(R.id.news_category);
+        category.setText(news.getCategoryString());
 
         return convertView;
     }

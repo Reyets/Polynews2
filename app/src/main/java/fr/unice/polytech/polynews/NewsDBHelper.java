@@ -96,14 +96,14 @@ public class NewsDBHelper extends SQLiteOpenHelper {
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             News news = new News();
-            news.setId(cursor.getInt(0));
-            news.setTitle(cursor.getString(0));
-            news.setContent(cursor.getString(1));
-            news.setAuthor(cursor.getString(2));
-            news.setDate(cursor.getString(3));
-            news.setCategory(cursor.getInt(4));
-            news.setMedia_type(cursor.getInt(5));
-            news.setMedia_path(cursor.getString(6));
+            news.setId(cursor.getInt(cursor.getColumnIndex("_id")));
+            news.setTitle(cursor.getString(cursor.getColumnIndex("title")));
+            news.setContent(cursor.getString(cursor.getColumnIndex("content")));
+            news.setAuthor(cursor.getString(cursor.getColumnIndex("author")));
+            news.setDate(cursor.getString(cursor.getColumnIndex("date")));
+            news.setCategory(cursor.getInt(cursor.getColumnIndex("category")));
+            news.setMedia_type(cursor.getInt(cursor.getColumnIndex("media_type")));
+            news.setMedia_path(cursor.getString(cursor.getColumnIndex("media_path")));
             newsList.add(news);
             cursor.moveToNext();
         }

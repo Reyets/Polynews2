@@ -73,6 +73,14 @@ public class News {
         return category;
     }
 
+    public String getCategoryString() {
+        if(category==1)
+            return "POLITIQUE";
+        else
+            return "SOCIETE";
+    }
+
+
     public void setCategory(int category) {
         this.category = category;
     }

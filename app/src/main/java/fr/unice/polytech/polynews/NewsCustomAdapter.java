@@ -28,7 +28,9 @@ public class NewsCustomAdapter extends ArrayAdapter<News> {
         News news = getItem(position);
 
         ImageView image = (ImageView) convertView.findViewById(R.id.news_image);
-        image.setImageResource(R.drawable.icon);
+        //image.setImageResource(R.drawable.icon);
+        DownloadPictures task = new DownloadPictures(image, getContext());
+        task.execute(news.getMedia_path());
 
         TextView title = (TextView) convertView.findViewById(R.id.news_title);
         title.setText(news.getTitle());
@@ -36,8 +38,8 @@ public class NewsCustomAdapter extends ArrayAdapter<News> {
         TextView date = (TextView) convertView.findViewById(R.id.news_date);
         date.setText(news.getDate());
 
-        //TextView category = (TextView) convertView.findViewById(R.id.news_category);
-        //category.setText(news.getCategory());
+        TextView category = (TextView) convertView.findViewById(R.id.news_category);
+        category.setText(news.getCategoryString());
 
         return convertView;
     }

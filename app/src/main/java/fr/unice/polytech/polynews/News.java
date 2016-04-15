@@ -62,7 +62,7 @@ public class News {
     }
 
     public String getDate() {
-        return date;
+        return date.substring(0,10);
     }
 
     public void setDate(String date) {
@@ -72,6 +72,14 @@ public class News {
     public int getCategory() {
         return category;
     }
+
+    public String getCategoryString() {
+        if(category==1)
+            return "POLITIQUE";
+        else
+            return "SOCIETE";
+    }
+
 
     public void setCategory(int category) {
         this.category = category;

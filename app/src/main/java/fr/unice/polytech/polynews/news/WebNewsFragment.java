@@ -37,7 +37,7 @@ public class WebNewsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_newsweb_list, container, false);
         WebView web = (WebView) rootView.findViewById(R.id.webnewsview);
-
+        
         web.loadUrl("file:///android_asset/communication.html");
         return rootView;
     }
@@ -45,6 +45,5 @@ public class WebNewsFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
     }
 }

@@ -37,8 +37,8 @@ public class WebNewsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_newsweb_list, container, false);
         WebView web = (WebView) rootView.findViewById(R.id.webnewsview);
-        web.loadUrl("http://communication.polytechnice.fr/?m=1");
 
+        web.loadUrl("file:///android_asset/communication.html");
         return rootView;
     }
 

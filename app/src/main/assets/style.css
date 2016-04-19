@@ -1,0 +1,27 @@
+.monBody{
+	font-family:"Times New Roman", Times, serif; font-size:14px; color:#000000;
+}
+
+.monTitre {
+	text-align:center; color:blue;
+}
+
+.maSection {
+	font-size:130%; font-weight:bold; margin-right:0.5em;
+}
+
+.maSsSection{
+	font-size:110%; font-weight:bold; margin-left:2em;
+}
+.monNiveau {
+	font-size:110%; font-style:italic; margin-left:2em; float:right;
+ 	background:#3333EE ; color: white; padding:0.3em; width: 9rem; clear:both;
+}
+.monPublic {
+	font-size:110%;  font-weight:bold;  margin-left:2em; background:#3333EE ;
+    color: white; padding:0.3em;   width: 7rem; display:inline-block; text-align:center;
+}
+
+.monDescriptif {
+	width: 75%;
+}

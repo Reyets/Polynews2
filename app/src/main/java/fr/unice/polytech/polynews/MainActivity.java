@@ -13,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import fr.unice.polytech.polynews.cours.WebCoursFragment;
+import fr.unice.polytech.polynews.news.WebNewsFragment;
+import fr.unice.polytech.polynews.tutoriel.NewsListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -91,8 +93,9 @@ public class MainActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             if (position == 0) {
-                return NewsListFragment.newInstance(position + 1);
-            } if (position == 1) {
+                //return NewsListFragment.newInstance(position + 1);
+                return WebNewsFragment.newInstance(position+1);
+            } else if (position == 1) {
                 return  WebCoursFragment.newInstance(position+1);
             } else {
                 return PlaceholderFragment.newInstance(position + 1);
@@ -110,11 +113,11 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "NEWS";
+                    return "ACTUS";
                 case 1:
-                    return "SECTION 2";
+                    return "COURS";
                 case 2:
-                    return "SECTION 3";
+                    return "ASSOS";
             }
             return null;
         }

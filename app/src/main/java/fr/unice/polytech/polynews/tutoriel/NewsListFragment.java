@@ -1,4 +1,4 @@
-package fr.unice.polytech.polynews;
+package fr.unice.polytech.polynews.tutoriel;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,12 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
-import android.widget.TextView;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import fr.unice.polytech.polynews.R;
 
 public class NewsListFragment extends Fragment {
     /**

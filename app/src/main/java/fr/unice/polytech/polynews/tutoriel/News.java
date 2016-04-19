@@ -1,4 +1,4 @@
-package fr.unice.polytech.polynews;
+package fr.unice.polytech.polynews.tutoriel;
 
 /**
  * Created by Antoine on 19/03/2016.

@@ -1,4 +1,4 @@
-package fr.unice.polytech.polynews;
+package fr.unice.polytech.polynews.tutoriel;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -13,6 +13,8 @@ import java.io.OutputStream;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import fr.unice.polytech.polynews.BuildConfig;
 
 public class NewsDBHelper extends SQLiteOpenHelper {
 

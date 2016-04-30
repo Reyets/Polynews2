@@ -1,5 +1,22 @@
+.first h3{
+    margin:auto;
+}
+
+.first .Image {
+    float:left;
+}
+
+.first .Image img{
+    width:135px;
+    height:135px;
+
+}
+.first .post-body {
+    margin-top:30px;
+}
 .first {
-    background-color: red;
+    font-weight: bold;
+    height:250%;
 }
 
 

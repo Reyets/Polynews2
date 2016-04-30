@@ -5,19 +5,24 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/article"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp">
+        android:layout_margin="2dp">
 
         <ImageView
             android:id="@+id/news_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/icon"
-            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/head"
             android:layout_alignParentStart="true" />
 
         <RelativeLayout
@@ -25,22 +30,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorBlue"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/news_image">
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
 
             <TextView
                 android:id="@+id/news_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="5dp" />
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorWhite"/>
 
             <TextView
                 android:id="@+id/news_category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/colorWhite"/>
 
 
         </RelativeLayout>
@@ -48,11 +56,9 @@
         <TextView
             android:id="@+id/news_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/head"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/news_image"
-            android:layout_marginStart="5dp" />
+            android:layout_height="50dp"
+            android:layout_below="@+id/news_image"
+            android:layout_alignParentStart="true" />
 
 
 

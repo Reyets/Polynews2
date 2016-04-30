@@ -42,6 +42,7 @@ public class NewsCustomAdapter extends ArrayAdapter<News> {
         TextView category = (TextView) convertView.findViewById(R.id.news_category);
         category.setText(news.getCategoryString());
 
+
         return convertView;
     }
 

@@ -12,9 +12,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import fr.unice.polytech.polynews.association.AssoListFragment;
 import fr.unice.polytech.polynews.cours.WebCoursFragment;
 import fr.unice.polytech.polynews.news.WebNewsFragment;
-import fr.unice.polytech.polynews.tutoriel.NewsListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (position == 1) {
                 return  WebCoursFragment.newInstance(position+1);
             } else {
-                return PlaceholderFragment.newInstance(position + 1);
+                return AssoListFragment.newInstance(position + 1);
             }
 
         }

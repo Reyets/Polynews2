@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,15 +64,16 @@ public class NewsListFragment extends Fragment {
             e.printStackTrace();
         }
         List<News> listNews = new ArrayList<>(database.getNewsList());
-
+        listNews.remove(0);
         News first = listNews.get(0);
         listNews.remove(0);
         List<News> onenew = new ArrayList<>(1);
         onenew.add(first);
-        NewsCustomAdapter firstAdapter = new NewsCustomAdapter(getActivity(), onenew);
+        FirstNewsCustomAdapter firstAdapter = new FirstNewsCustomAdapter(getActivity(), onenew);
         NewsCustomAdapter newsAdapter = new NewsCustomAdapter(getActivity(), listNews);
 
         GridView grid = (GridView) getView().findViewById(R.id.grid) ;
+        /*
         RelativeLayout postcard = (RelativeLayout) getView().findViewById(R.id.onecard);
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         CardView firstView = (CardView) firstAdapter.getView(0, inflater.inflate(R.layout.fragment_news_element, null), postcard);
@@ -81,6 +83,12 @@ public class NewsListFragment extends Fragment {
         firstView.setPadding(0,50, 0, 50);
         firstView.setShadowPadding(10, 10, 20, 20);
         postcard.addView(firstView);
+        */
+        GridView firstgrid = (GridView) getView().findViewById(R.id.firstgrid) ;
+
+        firstgrid.setAdapter(firstAdapter);
+        firstgrid.setNumColumns(1);
+
         grid.setAdapter(newsAdapter);
 
 

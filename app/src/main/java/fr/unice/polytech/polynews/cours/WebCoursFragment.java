@@ -38,12 +38,7 @@ public class WebCoursFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_cours_list, container, false);
         WebView web = (WebView) rootView.findViewById(R.id.webview);
-        //web.loadUrl("http://users.polytech.unice.fr/~pfz/COURS_SSHOW/finalWord.html");
         web.loadUrl("file:///android_asset/LesCoursSI.html");
-      //  webView.loadDataWithBaseURL("file:///android_asset/", htmlData, "text/html", "UTF-8", null);
-      //  htmlData = "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />" + htmlData;
-// lets assume we have /assets/style.css file
-      //  web.loadDataWithBaseURL("file:///android_asset/", htmlData, "text/html", "UTF-8", null);
         return rootView;
     }
 

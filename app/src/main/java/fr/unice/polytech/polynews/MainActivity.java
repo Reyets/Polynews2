@@ -15,12 +15,13 @@ import android.view.MenuItem;
 import fr.unice.polytech.polynews.association.AssoListFragment;
 import fr.unice.polytech.polynews.cours.WebCoursFragment;
 import fr.unice.polytech.polynews.news.WebNewsFragment;
+import fr.unice.polytech.polynews.tutoriel.NewsListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
+     * frag ments for each of the sections. We use a
      * {@link FragmentPagerAdapter} derivative, which will keep every
      * loaded fragment in memory. If this becomes too memory intensive, it
      * may be best to switch to a
@@ -96,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 return NewsListFragment.newInstance(position + 1);
                 //return WebNewsFragment.newInstance(position+1);
             } else if (position == 1) {
-                return  WebCoursFragment.newInstance(position+1);
+                return WebCoursFragment.newInstance(position+1);
             } else {
                 return AssoListFragment.newInstance(position + 1);
             }
